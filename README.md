@@ -32,20 +32,24 @@ fixed and `acroread` becomes a usable application again.
 
 The missing libraries files are installed in the proper place for `acroread`
 by installing
-[AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm](AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm)
+
+[https://github.com/jjkeijser/acroread-libs/releases/download/RHEL7/AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm]
+(AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm)
 
 If you want get rid of the following annoying warning when starting `acroread`
 ```
   (acroread:9420): Gtk-WARNING **: Unable to locate theme engine in module_path: "clearlooks",
 ```
 then make sure to also install the 32bit version of the 
-[gtk2-engines-2.20.2-7.el7.i686.rpm](GTK2 engines)
+
+[https://github.com/jjkeijser/acroread-libs/releases/download/RHEL7/gtk2-engines-2.20.2-7.el7.i686.rpm]
+(GTK2 engines)
 
 In one go:
 
 ```
-  yum install https://www.nikhef.nl/~janjust/acroread-libs/AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm \
-              https://www.nikhef.nl/~janjust/acroread-libs/gtk2-engines-2.20.2-7.el7.i686.rpm
+  yum install https://github.com/jjkeijser/acroread-libs/releases/download/RHEL7/AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm
+              https://github.com/jjkeijser/acroread-libs/releases/download/RHEL7/gtk2-engines-2.20.2-7.el7.i686.rpm
 ```
 
 **Note**: The distribution used in the version of the gtk2-engines rpm is '`el7`' instead of the 
@@ -73,7 +77,9 @@ first *before* installing this RPM do avoid any dependency issues.
 ## Installation
 
 The missing libraries files are installed in the proper place for `acroread` by installing
-[AdobeReader-libs-2.0.0-2.fc32.i686.rpm](AdobeReader-libs-2.0.0-2.fc32.i686.rpm)
+
+[https://github.com/jjkeijser/acroread-libs/releases/download/FC32/AdobeReader-libs-2.0.0-2.fc32.i686.rpm]
+(AdobeReader-libs-2.0.0-2.fc32.i686.rpm)
 
 If you want get rid of the following annoying warning when starting `acroread`
 ```
@@ -84,7 +90,7 @@ CentOS 7, is still available for the (64bit) Fedora 32+.
 
 In one go:
 ```
-  dnf install https://www.nikhef.nl/~janjust/acroread-libs/AdobeReader-libs-2.0.0-2.fc32.i686.rpm \
+  dnf install https://github.com/jjkeijser/acroread-libs/releases/download/FC32/AdobeReader-libs-2.0.0-2.fc32.i686.rpm
               gtk2-engines.i686
 ```
 
