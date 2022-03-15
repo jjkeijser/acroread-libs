@@ -1,5 +1,4 @@
 # Acrobat Reader for Linux compatibility libraries for CentOS 7 and Fedora 32+
-
 The Acrobat Reader for Linux (AcroRead) is one of the few PDF readers for Linux
 that fully support XFA forms and therefore is still widely used, even though Adobe
 stopped supporting it somewhere in 2013. 
@@ -10,7 +9,6 @@ used without many problems.
 On CentOS 7 and Fedora 32+ however, life is not that easy.
 
 ## Problems with AcroRead on CentOS 7
-
 First of all, some libraries are missing, most notably `libpangox-1.0.so.0`.
 Unfortunately, even a rebuild of that package from the Fedora repositories does not 
 make `acroread` usable.
@@ -20,7 +18,6 @@ might start, but as soon as the user selects the **File** menu and chooses **Ope
 to open a file, `acroread` coredumps.
 
 ### Solution
-
 In order to overcome these problems, I have put together a compatibility library RPM, 
 based on 32bit libraries from CentOS 6. By installing this RPM, the missing requirements
 when trying to install the `AcroRead_enu` RPM are fulfilled.
@@ -29,10 +26,7 @@ By repackaging the right libraries from CentOS 6, the coredumps are also
 fixed and `acroread` becomes a usable application again.
 
 ### Installation
-
-The missing libraries files are installed in the proper place for `acroread`
-by installing
-
+The missing libraries files are installed in the proper place for `acroread` by installing
 [AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm](https://github.com/jjkeijser/acroread-libs/releases/download/RHEL7/AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm)
 
 If you want get rid of the following annoying warning when starting `acroread`
@@ -40,7 +34,6 @@ If you want get rid of the following annoying warning when starting `acroread`
   (acroread:9420): Gtk-WARNING **: Unable to locate theme engine in module_path: "clearlooks",
 ```
 then make sure to also install the 32bit version of the 
-
 [GTK2 engines](https://github.com/jjkeijser/acroread-libs/releases/download/RHEL7/gtk2-engines-2.20.2-7.el7.i686.rpm)
 
 In one go:
@@ -54,15 +47,12 @@ In one go:
 CentOS 7 "default" of '`el7.centos`'.  This is done to avoid installation issues when installing both 
 the 32bit and 64bit versions of the gtk2-engines package.
 
-
 ## Problems with AcroRead on Fedora 32+
-
 As Acroread is getting older and older, compatibility with the libraries provided
 by the OS is deteriorating. Starting with Fedora 33, it is no longer possible to 
 install Acroread without having to (re)compile some compatibility libraries.
 
 ### Solution
-
 In order to overcome these problems, I have put together a compatibility library RPM, 
 based on the 32bit libraries from Fedora 32. By installing this RPM, the missing requirements
 when trying to install the `AcroRead_enu` RPM are fulfilled.
@@ -72,10 +62,8 @@ as they are now included in this RPM. The downside is that if you have a **diffe
 32bit application that also relies on these libraries then you will need to install that one
 first *before* installing this RPM do avoid any dependency issues.
 
-## Installation
-
+### Installation
 The missing libraries files are installed in the proper place for `acroread` by installing
-
 [AdobeReader-libs-2.0.0-2.fc32.i686.rpm](https://github.com/jjkeijser/acroread-libs/releases/download/FC32/AdobeReader-libs-2.0.0-2.fc32.i686.rpm)
 
 If you want get rid of the following annoying warning when starting `acroread`
@@ -92,7 +80,6 @@ In one go:
 ```
 
 This library has the following `provides`:
--
 - `libGL.so.1`  
 - `libGLU.so.1`
 - `libcairo.so.2`
@@ -107,4 +94,3 @@ This library has the following `provides`:
 - `libpangoxft-1.0.so.0`
 
 but more libraries are included in the RPM, as the libraries above themselves depend on them.
-
