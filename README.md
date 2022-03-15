@@ -33,8 +33,8 @@ fixed and `acroread` becomes a usable application again.
 The missing libraries files are installed in the proper place for `acroread`
 by installing
 
-[https://github.com/jjkeijser/acroread-libs/releases/download/RHEL7/AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm]
 (AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm)
+[https://github.com/jjkeijser/acroread-libs/releases/download/RHEL7/AdobeReader-libs-1.0.0-1.el7.centos.i686.rpm]
 
 If you want get rid of the following annoying warning when starting `acroread`
 ```
@@ -42,8 +42,8 @@ If you want get rid of the following annoying warning when starting `acroread`
 ```
 then make sure to also install the 32bit version of the 
 
-[https://github.com/jjkeijser/acroread-libs/releases/download/RHEL7/gtk2-engines-2.20.2-7.el7.i686.rpm]
 (GTK2 engines)
+[https://github.com/jjkeijser/acroread-libs/releases/download/RHEL7/gtk2-engines-2.20.2-7.el7.i686.rpm]
 
 In one go:
 
@@ -78,8 +78,8 @@ first *before* installing this RPM do avoid any dependency issues.
 
 The missing libraries files are installed in the proper place for `acroread` by installing
 
-[https://github.com/jjkeijser/acroread-libs/releases/download/FC32/AdobeReader-libs-2.0.0-2.fc32.i686.rpm]
 (AdobeReader-libs-2.0.0-2.fc32.i686.rpm)
+[https://github.com/jjkeijser/acroread-libs/releases/download/FC32/AdobeReader-libs-2.0.0-2.fc32.i686.rpm]
 
 If you want get rid of the following annoying warning when starting `acroread`
 ```
